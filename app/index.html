@@ -1,0 +1,47 @@
+<html ng-app="simpleCRUD">
+	<head>
+		<title> Home </title>
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+		<link rel="stylesheet" href="app.css"/>
+	</head>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="app.js"></script>
+<body ng-controller="ReviewController">
+	<table class = "table">
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Rate</th>
+			<th>Comment</th>
+		</tr>
+		<tr ng-repeat="li in lists track by $index ">
+		<td>{{li.id}}</td>
+		<td>{{li.name}}</td>
+		<td>{{li.rate}}</td>
+		<td>{{li.comment}}</td>
+		<td> <a href="#" ng-click="delete(li.id)">Delete</td>
+		<td> <a href="#" ng-click="edit(li.id)">Edit</td>
+	 </tr>
+ </table>
+
+ <table>
+	 <tr>
+		 <td>ID:</td>
+		 <td><input type="text", ng-model="id"></td>
+	 </tr>
+	 <tr>
+		 <td>Name:</td>
+		 <td><input type="text", ng-model="name"></td>
+	 </tr>
+	 <tr>
+		 <td>Rate:</td>
+		 <td><input type="text", ng-model="rate"></td>
+	 </tr>
+	 <tr>
+		 <td>Comment:</td>
+		 <td><input type="text", ng-model="comment"></td>
+	 </tr>
+	 <td> <button class="button" ng-click="add()">Add</td>
+	 <td> <button class="button" ng-click="update()">Update</td>
+</body>
+</html>

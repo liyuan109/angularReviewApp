@@ -1,0 +1,13 @@
+{
+  "name": "angularOne",
+  "description": "A project for AngularJS",
+  "version": "0.0.0",
+  "homepage": "https://github.com/liyuan109/angularOne.git",
+  "private": true,
+  "dependencies": {
+    "angular": "1.5.x",
+    "angular-mocks": "1.5.x",
+    "angular-route": "1.5.x",
+    "bootstrap": "3.3.x"
+  }
+}
